@@ -1,0 +1,109 @@
+ping_device: csr1000v-0
+ping_dest: 10.4.1.100
+ping_repeat: 200
+ping_timeout: 1
+test_interval: 1
+test_item:
+  # link failure iosvl2-0
+  - target_device: iosvl2-0
+    target_interface: GigabitEthernet0/0
+  - target_device: iosvl2-0
+    target_interface: GigabitEthernet0/1
+  - target_device: iosvl2-0
+    target_interface: GigabitEthernet0/2
+  - target_device: iosvl2-0
+    target_interface: GigabitEthernet1/0
+  - target_device: iosvl2-0
+    target_interface: GigabitEthernet1/1
+  # link failure iosvl2-1
+  - target_device: iosvl2-1
+    target_interface: GigabitEthernet0/0
+  - target_device: iosvl2-1
+    target_interface: GigabitEthernet0/1
+  - target_device: iosvl2-1
+    target_interface: GigabitEthernet0/2
+  - target_device: iosvl2-1
+    target_interface: GigabitEthernet1/0
+  - target_device: iosvl2-1
+    target_interface: GigabitEthernet1/1
+  # link failure nxos9000-0
+  - target_device: nxos9000-0
+    target_interface: Ethernet1/1
+  - target_device: nxos9000-0
+    target_interface: Ethernet1/2
+  - target_device: nxos9000-0
+    target_interface: Ethernet1/3
+  - target_device: nxos9000-0
+    target_interface: Ethernet1/4
+  - target_device: nxos9000-0
+    target_interface: Ethernet1/10
+  - target_device: nxos9000-0
+    target_interface: Ethernet1/11
+  # link failure nxos9000-1
+  - target_device: nxos9000-1
+    target_interface: Ethernet1/1
+  - target_device: nxos9000-1
+    target_interface: Ethernet1/2
+  - target_device: nxos9000-1
+    target_interface: Ethernet1/3
+  - target_device: nxos9000-1
+    target_interface: Ethernet1/4
+  - target_device: nxos9000-1
+    target_interface: Ethernet1/10
+  - target_device: nxos9000-1
+    target_interface: Ethernet1/11
+  # link failure iosvl2-2
+  - target_device: iosvl2-2
+    target_interface: GigabitEthernet0/0
+  - target_device: iosvl2-2
+    target_interface: GigabitEthernet0/1
+  - target_device: iosvl2-2
+    target_interface: GigabitEthernet0/2
+  - target_device: iosvl2-2
+    target_interface: GigabitEthernet1/0
+  - target_device: iosvl2-2
+    target_interface: GigabitEthernet1/1
+  # link failure iosvl2-3
+  - target_device: iosvl2-3
+    target_interface: GigabitEthernet0/0
+  - target_device: iosvl2-3
+    target_interface: GigabitEthernet0/1
+  - target_device: iosvl2-3
+    target_interface: GigabitEthernet0/2
+  - target_device: iosvl2-3
+    target_interface: GigabitEthernet1/0
+  - target_device: iosvl2-3
+    target_interface: GigabitEthernet1/1
+  # link failure csr1000v-0
+  - target_device: csr1000v-0
+    target_interface: GigabitEthernet2
+  # device failure iosvl2-0
+  - target_device: iosvl2-0
+    target_interface:
+      - GigabitEthernet0/0-2
+      - GigabitEthernet1/0-1
+  # device failure iosvl2-1
+  - target_device: iosvl2-1
+    target_interface:
+      - GigabitEthernet0/0-2
+      - GigabitEthernet1/0-1
+  # device failure nxos9000-0
+  - target_device: nxos9000-0
+    target_interface:
+      - Ethernet1/1-4
+      - Ethernet1/10-11
+  # device failure nxos9000-1
+  - target_device: nxos9000-1
+    target_interface:
+      - Ethernet1/1-4
+      - Ethernet1/10-11
+  # device failure iosvl2-2
+  - target_device: iosvl2-2
+    target_interface:
+      - GigabitEthernet0/0-2
+      - GigabitEthernet1/0-1
+  # device failure iosvl2-3
+  - target_device: iosvl2-3
+    target_interface:
+      - GigabitEthernet0/0-2
+      - GigabitEthernet1/0-1
